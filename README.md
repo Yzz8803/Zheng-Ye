@@ -18,4 +18,4 @@ In this project, I used the following Git workflow:
 4. `final README update`: Updated with project description and video link.
 
 ### Walkthrough Video
-[Paste your YouTube/Vimeo link here]
+https://youtu.be/RpYgO05hUEU
