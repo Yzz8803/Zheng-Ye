@@ -1,5 +1,5 @@
 # Task 2: AI-Powered Customer Service Agent
-
+hw2- Zheng Ye
 This project demonstrates a simple automated customer service system using the Google Gemini 1.5 Flash API. It reads customer complaints from a JSON file and generates professional, empathetic responses.
 
 ## Project Structure
@@ -14,3 +14,9 @@ This project demonstrates a simple automated customer service system using the G
 2. **Install dependencies**:
    ```bash
    pip install -U google-generativeai
+
+   ## Video Demo
+You can watch the walk-through video of this project here:
+**https://youtu.be/gStsNCvtDgM**
+
+---
