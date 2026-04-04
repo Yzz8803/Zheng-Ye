@@ -1,0 +1,20 @@
+CASE ID: 1
+CUSTOMER INPUT: My package is 3 days late. Where is it?
+AI RESPONSE: AI Error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+========================================
+CASE ID: 2
+CUSTOMER INPUT: The screen is cracked. I want a refund!
+AI RESPONSE: AI Error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+========================================
+CASE ID: 3
+CUSTOMER INPUT: This is garbage! Worst service ever! NEVER buying again!
+AI RESPONSE: AI Error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+========================================
+CASE ID: 4
+CUSTOMER INPUT: I bought a spaceship from you and it won't fly.
+AI RESPONSE: AI Error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+========================================
+CASE ID: 5
+CUSTOMER INPUT: Late delivery, wrong item, and the agent hung up on me.
+AI RESPONSE: AI Error: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+========================================

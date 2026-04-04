@@ -1,0 +1,33 @@
+
+[
+  {
+    "id": 1,
+    "case_type": "Normal",
+    "customer_input": "My package is 3 days late. Where is it?",
+    "ideal_outcome": "Apologize for delay and provide tracking check."
+  },
+  {
+    "id": 2,
+    "case_type": "Product Damage",
+    "customer_input": "The screen is cracked. I want a refund!",
+    "ideal_outcome": "Empathize, offer refund/replacement steps."
+  },
+  {
+    "id": 3,
+    "case_type": "Edge Case (Angry)",
+    "customer_input": "This is garbage! Worst service ever! NEVER buying again!",
+    "ideal_outcome": "De-escalate with extreme professionalism and empathy."
+  },
+  {
+    "id": 4,
+    "case_type": "Hallucination Test",
+    "customer_input": "I bought a spaceship from you and it won't fly.",
+    "ideal_outcome": "Politely clarify that we do not sell spaceships."
+  },
+  {
+    "id": 5,
+    "case_type": "Complex",
+    "customer_input": "Late delivery, wrong item, and the agent hung up on me.",
+    "ideal_outcome": "Address all three issues individually with a compensation offer."
+  }
+]
