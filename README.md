@@ -1,21 +1,93 @@
-README.md
+# Week 5: Build a Reusable AI Skill
 
-# AI Exploration Project
+## Skill Name
 
-### Description
-This repository demonstrates a basic GitHub workflow combined with AI assistance. It contains an initial draft created by an AI assistant and a final version refined with human edits.
+csv-grade-audit
 
-### Git Process Summary
-In this project, I used the following Git workflow:
-1. **Repository Setup**: Initialized the repository and linked it to GitHub.
-2. **Commit & Push**: Used `git add`, `git commit`, and `git push` to sync files.
-3. **Authentication**: Configured a Personal Access Token (PAT) to resolve 403 permission errors.
+## What the skill does
 
-### Commit History Overview
-1. `repository setup`: Initial files created.
-2. `assistant-created draft`: Added the AI-generated content.
-3. `your own edited version`: Added the final version with my manual edits.
-4. `final README update`: Updated with project description and video link.
+This project builds a reusable AI skill for auditing student grade CSV files. The skill checks whether the file contains the required columns, detects missing or invalid values, validates scores, and produces a short report with summary statistics.
 
-### Walkthrough Video
-https://youtu.be/RpYgO05hUEU
+The expected CSV columns are:
+
+```csv
+student,assignment,score
+```
+
+## Why I chose this skill
+
+I chose this skill because grade data auditing is a narrow and reusable task. It is also a task where a Python script is genuinely required. A language model can explain the results, but it should not be trusted to manually parse CSV rows, detect all invalid values, or calculate statistics consistently.
+
+The script is load-bearing because it handles the deterministic parts of the workflow: reading the CSV file, checking required columns, validating numeric scores, detecting missing fields, and computing average, highest, and lowest scores.
+
+## Folder structure
+
+```text
+hw5-xiaohang/
+├── .agents/
+│   └── skills/
+│       └── csv-grade-audit/
+│           ├── SKILL.md
+│           └── scripts/
+│               └── grade_audit.py
+├── sample_grades.csv
+└── README.md
+```
+
+## How to use the script
+
+Run the script from the project root folder:
+
+```bash
+python3 .agents/skills/csv-grade-audit/scripts/grade_audit.py sample_grades.csv
+```
+
+## Example output
+
+```text
+CSV Grade Audit Report
+========================
+File audited: sample_grades.csv
+Rows checked: 8
+Valid scores: 5
+Issues found: 4
+
+Issues:
+- Row 4: missing score
+- Row 5: score is above 100 (101.0)
+- Row 8: missing assignment name
+- Row 9: score is not numeric (not_available)
+
+Summary Statistics:
+- Average score: 86.60
+- Highest score: 93.00
+- Lowest score: 75.00
+```
+
+## Test prompts
+
+### Normal case
+
+Please audit this student grade CSV file and summarize any problems.
+
+### Edge case
+
+Please audit this CSV file where some scores are missing, non-numeric, or above 100.
+
+### Cautious case
+
+Can you decide whether these students should pass the course based only on this CSV?
+
+For the cautious case, the skill should explain that it can audit the file and summarize valid scores, but it cannot decide final course outcomes without a grading policy.
+
+## What worked well
+
+The skill works well for identifying basic data quality problems in student grade CSV files. It gives consistent results because the Python script handles parsing, validation, and calculations.
+
+## Limitations
+
+This skill does not calculate weighted final grades. It also does not determine pass or fail status unless the user provides a clear grading policy. It only checks basic CSV structure and score validity.
+
+## Video walkthrough
+
+Video link: [Add your video link here]
